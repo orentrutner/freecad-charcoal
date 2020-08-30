@@ -109,10 +109,6 @@ QMdiArea {
 /*==================================================================================================
 MENUS
 ==================================================================================================*/
-QMenuBar::item {
-    padding: 6px 10px;
-}
-
 QMenuBar,
 QMenuBar::item {
     color: #c8c8c8;
@@ -124,6 +120,10 @@ QMenu::item {
     color: #c8c8c8;
     background-color: #3c3c3c;
     text-decoration: none;
+}
+
+QMenuBar::item {
+    padding: 6px 10px;
 }
 
 QMenuBar::item:selected,
@@ -926,6 +926,13 @@ QTreeView > QWidget > QDateTimeEdit:read-only {
     color: transparent;
     background-color: transparent;
     border-color: transparent;
+}
+
+/* position the line editor of renamed tree nodes */
+QTreeView > QWidget > QLineEdit {
+    margin: 0px;
+    padding: 0px 0px 0px 1px;
+    border: none;
 }
 
 /* Fix to correctly (not totally) draw QTextEdit on OSX at Page properties: "Page result", "Template" and "Editable Texts" */
