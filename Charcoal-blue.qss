@@ -47,7 +47,7 @@ If you would like to change the overall look/style of the theme, just find and r
         #333333
         #383838
         #3c3c3c
-        #787878
+        #787878 = disabled color
         #8c8c8c
         #a0a0a0
         #b4b4b4
@@ -132,6 +132,13 @@ QMenu::item:selected,
 QMenu::item:pressed {
     color: white;
     background-color: #1177bb;
+}
+
+QMenu::item:disabled,
+QMenu::item:disabled:selected,
+QMenu::item:disabled:pressed {
+    color: #787878;
+    background-color: transparent;
 }
 
 QMenu::right-arrow {
@@ -822,12 +829,18 @@ Gui--PropertyEditor--PropertyEditor > QWidget > QFrame:focus {
 /* hack to hide weird redundant information inside the value of a Placement cell */
 Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel,
 Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel:disabled {
-    color: #888888;
-    background-color: transparent;
+    color: #787878;
+    background-color: #252525;
     border: none;
     border-radius: 0px;
-    margin: 0px;
-    padding: 0px;
+    padding: 1px 0px 0px 0px;
+    margin: 0px 0px 1px 0px;
+}
+
+Gui--PropertyEditor--PropertyEditor QLineEdit:focus {
+    border: 1px solid #0e639c;
+    margin-bottom: 1px;
+    padding-top: 1px;
 }
 
 /* hack to hide non editable cells inside Property values */
@@ -842,10 +855,17 @@ Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:disabled {
     selection-background-color: transparent;
 }
 
+Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:read-only:focus,
+Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:disabled:focus {
+    color: white;
+}
+
 /* hack to hide weird redundant information inside cells with links and no editable data (but editable via "..." button) */
 Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
 	color: white;
-	background-color: #cbd8e6;
+	background-color: #2d2d2d;
+    padding: 1px 0px 0px 0px;
+    margin: 0px 0px 1px 0px;
 }
 
 /* hack to disable margin inside Property values to following elements */
@@ -856,9 +876,22 @@ Gui--PropertyEditor--PropertyEditor QLineEdit,
 Gui--PropertyEditor--PropertyEditor QComboBox {
     margin-left: 0px;
     margin-right: 0px;
-    padding-top: 0px;
+    margin-bottom: 1px;
+    padding-top: 1px;
     padding-bottom: 0px;
 }
+
+Gui--PropertyEditor--PropertyEditor QSpinBox,
+Gui--PropertyEditor--PropertyEditor QDoubleSpinBox,
+Gui--PropertyEditor--PropertyEditor QAbstractSpinBox,
+Gui--PropertyEditor--PropertyEditor QLineEdit {
+    padding-left: 0px;
+}
+
+Gui--PropertyEditor--PropertyEditor QComboBox {
+    padding-left: 2px;
+}
+
 
 /* reset min-height to 0px inside list views */
 QTreeView > QWidget > QComboBox,
@@ -1601,8 +1634,8 @@ QPushButton:focus {
 QPushButton:disabled,
 QPushButton:disabled:checked {
     color: #787878;
-    background-color: #5a5a5a; /* same as enabled color */
-    border-color: #5a5a5a; /* same as enabled color */
+    background-color: #2d2d2d; /* same as enabled color */
+    border-color: #2d2d2d; /* same as enabled color */
 }
 
 QPushButton:pressed {
@@ -1644,8 +1677,8 @@ Gui--ColorButton:pressed {
 
 /* Pushbutton style for "..." inside Placement cell which launches Placement tool */
 Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QPushButton {
-    background-color: #1e1e1e;
-    border: 1px solid #5a5a5a;
+    background-color: #3c3c3c;
+    border: 1px solid #0e639c;
     min-width: 16px; /* reset it due to larger value on regular QPushButton, same or bigger value as regular QPushButton min-height */
     border-radius: 0px;
     margin: 0px; /* reset */
@@ -1692,8 +1725,8 @@ QDialog QToolButton:focus {
 QDialog QToolButton:disabled,
 QDialog QToolButton:disabled:checked {
     color: #888888;
-    border-color: #1e1e1e;
-    background-color: #1e1e1e;
+    border-color: #2d2d2d;
+    background-color: #2d2d2d;
 }
 
 QDialog QToolButton:pressed {
@@ -2244,7 +2277,7 @@ QTableView > QWidget > QTextEdit:disabled,
 QTableView > QWidget > QTimeEdit:disabled,
 QTableView > QWidget > QDateEdit:disabled,
 QTableView > QWidget > QDateTimeEdit:disabled {
-    color: rgba(0,0,0,120);
+    color: rgba(255, 255, 255, 120);
     background-color: transparent;
     border-color: transparent;
 }
