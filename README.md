@@ -21,6 +21,8 @@ Seems to mostly work fine with the 0.19 pre-release, with minor visual issues in
     - Change Edit/Preferences/Display/Colors/Background Color to Simple Color: #1e1e1e
     - Change Edit/Preferences/Display/Colors/Object being edited to #0e639c
     - Change Edit/Preferences/Display/Colors/Active Container to #3c3c3c
+    - Change Edit/Preferences/Display/Part Colors/Default line color to #5c5c5c
+    - Change Edit/Preferences/Display/Part Colors/Default vertex color to #5c5c5c
     - Change Edit/Preferences/Start/Background Color to #1e1e1e
     - Change Edit/Preferences/Start/Page Background Color to #555555
     - Change Edit/Preferences/Start/Box Background Color to #777777
@@ -34,3 +36,4 @@ Seems to mostly work fine with the 0.19 pre-release, with minor visual issues in
    - Change Edit/Preferences/Sketcher/Colors/Construction geometry to #446688
    - Change Edit/Preferences/Sketcher/Colors/Fully constrained geometry to #44cc44
    - Change Edit/Preferences/Sketcher/Colors/Constraint color to #cc4444
+   - Change Edit/Preferences/Sketcher/Colors/Reference constraint color to #0044cc
