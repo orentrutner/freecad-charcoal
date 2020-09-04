@@ -829,12 +829,17 @@ Gui--PropertyEditor--PropertyEditor > QWidget > QFrame:focus {
 /* hack to hide weird redundant information inside the value of a Placement cell */
 Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel,
 Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel:disabled {
-    color: #787878;
-    background-color: #252525;
+    color: transparent;
+    background-color: transparent;
     border: none;
     border-radius: 0px;
     padding: 1px 0px 0px 0px;
     margin: 0px 0px 1px 0px;
+}
+
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel:disabled {
+    color: transparent;
+    background-color: rgba(40, 40, 40, 128);
 }
 
 Gui--PropertyEditor--PropertyEditor QLineEdit:focus {
@@ -850,7 +855,7 @@ Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:read-only,
 Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:disabled {
     color: transparent;
     border-color: transparent;
-    background-color: transparent;
+    background-color: rgba(40, 40, 40, 128);
     selection-color: transparent;
     selection-background-color: transparent;
 }
@@ -858,14 +863,6 @@ Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:disabled {
 Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:read-only:focus,
 Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:disabled:focus {
     color: white;
-}
-
-/* hack to hide weird redundant information inside cells with links and no editable data (but editable via "..." button) */
-Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
-	color: white;
-	background-color: #2d2d2d;
-    padding: 1px 0px 0px 0px;
-    margin: 0px 0px 1px 0px;
 }
 
 /* hack to disable margin inside Property values to following elements */
@@ -957,7 +954,7 @@ QTreeView > QWidget > QTimeEdit:read-only,
 QTreeView > QWidget > QDateEdit:read-only,
 QTreeView > QWidget > QDateTimeEdit:read-only {
     color: transparent;
-    background-color: transparent;
+    background-color: rgba(40, 40, 40, 128);
     border-color: transparent;
 }
 
@@ -1677,7 +1674,7 @@ Gui--ColorButton:pressed {
 
 /* Pushbutton style for "..." inside Placement cell which launches Placement tool */
 Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QPushButton {
-    background-color: #3c3c3c;
+    background-color: #0e639c;
     border: 1px solid #0e639c;
     min-width: 16px; /* reset it due to larger value on regular QPushButton, same or bigger value as regular QPushButton min-height */
     border-radius: 0px;
