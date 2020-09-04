@@ -1,4 +1,4 @@
-# Charcoal-blue theme for FreeCAD
+# Charcoal-blue dark theme for FreeCAD
 A vscode-inspired dark theme for FreeCAD.  Based on the Dark Blue theme by
 Pablo Gil Fernández (https://github.com/pgilfernandez/FreeCAD_stylesheets).
 
